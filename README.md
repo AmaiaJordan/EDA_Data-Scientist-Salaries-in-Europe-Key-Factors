@@ -1,85 +1,63 @@
+Data Scientists SAlaries in Europe: Key Factors
 
-# Labor Market for Data Scientists in Europe: What Factors Influence Salary?
 
-## Project Overview
-This project explores salary patterns for data scientists across Europe, focusing on factors that impact compensation. Using data from 2020 to 2024, it aims to uncover insights into how variables like experience level, job category, location, and company size affect salaries in this high-demand field.
+1. Introduction
 
-## Objectives
-- Identify key patterns and characteristics affecting data scientist salaries in Europe.
-- Analyze variable influences on total earnings for professionals in the data science field.
-- Provide insights for both candidates and employers to make informed decisions in a competitive job market.
+The demand for data science professionals in Europe has surged due to the increased reliance on data-driven decision-making across industries. This analysis aims to uncover key factors affecting data scientist salaries, providing insight for both job seekers and employers.
 
-## Dataset Description
-The data used in this project is sourced from the **Data Science Salaries Dataset** on Kaggle. The dataset comprises 14,838 rows and 11 columns, covering data collected between 2020 and 2024.
+Objective: To identify patterns and characteristics that influence salaries, allowing for a deeper understanding of the factors that determine compensation levels.
 
-### Key Variables
-| Variable                  | Description                                                                 | Type               |
-|---------------------------|-----------------------------------------------------------------------------|--------------------|
-| `work_year`               | Year of salary data collection                                             | Year               |
-| `experience_level`        | Experience level of the employee (Junior, Mid-level, Senior, Expert)       | Ordinal Categorical|
-| `employment_type`         | Type of employment (Full-Time, Part-Time, Contract)                        | Ordinal Categorical|
-| `job_title`               | Role of the employee (e.g., Data Analyst, Data Scientist)                  | Nominal Categorical|
-| `salary`                  | Salary in specified currency                                               | Numeric            |
-| `salary_currency`         | Currency used in salary                                                    | Nominal Categorical|
-| `salary_in_usd`           | Salary converted to USD for standardization                                | Numeric            |
-| `employee_residence`      | Employee's place of residence                                              | Nominal Categorical|
-| `remote_ratio`            | Percentage of remote work allowed                                         | Ordinal Categorical|
-| `company_location`        | Location of the hiring company                                             | Ordinal Categorical|
-| `company_size`            | Company size (Small, Medium, Large)                                        | Ordinal Categorical|
 
-### Additional Variables Created for Analysis
-| Variable                  | Description                                                                                  | Type               |
-|---------------------------|----------------------------------------------------------------------------------------------|--------------------|
-| `job_category`            | Higher-level job categories (Data Analyst, Data Scientist, Data Architect/Engineer, Manager) | Nominal Categorical|
-| `salary_in_euro`          | Salary converted to Euro                                                                     | Numeric            |
-| `country_employee_residence`| Country name associated with ISO code                                                     | Ordinal Categorical|
-| `europe_zone`             | Region within Europe based on employee residence                                             | Ordinal Categorical|
-| `experience_level_num`    | Numeric conversion of experience level                                                       | Numeric            |
-| `salary_category_num`     | Numeric conversion of salary categories                                                      | Numeric            |
-| `salary_category`         | Salary grouped in ranges (e.g., ‘under 40,000€,’ ‘40,000€-50,000€’)                         | Ordinal Categorical|
-| `company_size_num`        | Numeric conversion of company size categories                                                | Numeric            |
+2. Data Overview
 
-## Data Preprocessing
-- **Data Quality**: No missing values or duplicates were found.
-- **Data Type Conversion**: Not required, as data types were compatible with analysis requirements.
-- **Filtering**: Focused on data scientists residing in Europe.
+Source: Data was obtained from the "Data Science Salaries Dataset" on Kaggle, encompassing 14,838 records from 2020 to 2024.
 
-## Analysis Approach
+Key Variables:
 
-### 1. Univariate Analysis
-- **Distribution and Trends**: Each variable's distribution was examined to understand its relevance and distribution across values.
-- **Central Tendency**: The `salary_in_euro` variable showed a general upward trend in average salary until 2023, with a slight decrease in 2024.
-- **Observations**:
-  - The United Kingdom is the leading location for data science professionals.
-  - Remote work is less common than expected, with on-site work prevailing.
-  - Most companies are medium-sized (80.58%), typically with 50-250 employees and revenue of 10M-50M Euros.
+Experience Level: (Junior, Mid-level, Senior, Expert)
+Job Title: Specific roles within data science.
+Salary in USD: Standardized salary figures.
+Remote Work Ratio: Percentage of work done remotely.
+Company Size: Classified by number of employees and revenue.
 
-### 2. Bivariate and Multivariate Analysis
-- Key influential variables:
-  - **Employee Residence**: Professionals in Great Britain and Western Europe generally earn higher salaries.
-  - **Job Category & Experience Level**: Higher roles (e.g., Data Architect/Engineer) and advanced experience levels correlate with higher salaries.
-  - **Company Size**: Larger companies generally offer higher salaries.
+Added Variables for Analysis:
 
-### 3. Challenges
-- **Categorical Variables**: Complexities in determining correlations due to categorical data types. Attempts to use radar charts for correlation visualization were not effective. Instead, histograms and bar charts provided clearer insights.
-- **Variable Consolidation**: Grouped categories (e.g., `job_title` to `job_category`) to simplify analysis.
+Job Category: Roles grouped into four categories (Data Analyst, Data Scientist, Data Architect/Engineer, Data Manager).
+Salary in Euro: Standardized salaries for analysis within Europe.
+Employee Residence Region: Categorized by European zones.
 
-## Conclusions
-This analysis provides a comprehensive look at factors impacting data science salaries across Europe. Key findings:
-- **Experience and Role**: Advanced roles like Data Architect/Engineer command higher salaries, as do senior professionals.
-- **Geographic Location**: Salaries are generally higher in the UK and Western Europe.
-- **Company Size**: Medium and large companies tend to offer more competitive compensation.
-  
-For **data science professionals**, acquiring high-demand skills (e.g., AI, cloud computing) and considering relocation could enhance salary prospects. For **employers**, a competitive salary strategy should factor in local living costs, technical skill requirements, and investment in professional development.
 
-## Usage
-This dataset and analysis offer valuable insights for:
-- Benchmarking salaries by experience, job title, and company size.
-- Understanding the impact of remote work and geographic factors on compensation.
-  
-## License
-This project is available under the MIT License.
+3. Data Preprocessing
 
----
+Data Quality: No missing or duplicate data.
+Transformations: New variables, such as "job_category" and "salary_in_euro," were added to enable easier analysis.
+Filtering: Analysis is focused on data scientists residing in Europe only.
+
+
+4. Univariate Analysis
+
+Salary Trend (2020-2024): Salaries generally increased until 2023, with a noticeable change in 2024.
+Job Distribution: The UK leads in the number of data science professionals and companies hiring in Europe.
+Experience Level and Job Category: These variables are evenly distributed and play a crucial role in determining salary levels.
+Remote Work: On-site roles remain more common than remote options.
+Company Size: Majority of employers (80.58%) are medium-sized companies, highlighting that mid-sized organizations drive much of the demand.
+
+
+5. Bivariate and Multivariate Analysis
+
+Influential Factors:
+Location: Data scientists in the UK and Western Europe earn higher salaries than those in other regions.
+Job Category and Experience Level: Senior roles, particularly in Data Architecture/Engineering, command higher salaries. Notably, while experience generally correlates with higher salaries, data analysts do not see as strong an increase due to limited senior roles within that category.
+
+
+6. Challenges
+
+Analyzing categorical data proved challenging, as traditional correlation metrics were less effective. Most correlations were visualized through histograms and bar charts, with some nominal variables grouped into broader categories to reveal clearer patterns.
+
+
+7. Conclusions
+
+For data science professionals, developing technical skills in fields like AI and cloud computing, and potentially relocating to high-paying regions, can improve salary outcomes. Employers should consider both the technical expertise and experience level of candidates and offer competitive salaries to attract and retain talent.
 
 Explore the dataset and uncover patterns in the European labor market for data scientists!
+
